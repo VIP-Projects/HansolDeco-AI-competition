@@ -1,6 +1,6 @@
 # DACON: [도배 하자 유형 분류 AI 경진대회](https://dacon.io/competitions/official/236082/overview/description)
 
-#### 총 19가지의 도배 하자 유형을 분류하는 AI 모델을 개발 (23.04.10 - 23.05.22) - 김준용, 길다영
+#### 총 19가지의 도배 하자 유형을 분류하는 AI 모델을 개발 (23.04.10 - 23.05.22) - 길다영, 김준용
 #### 📊 [PUBLIC] 57/1028 (상위 10%) 점수: 0.65692
 #### 📊 [PRIVATE] 55/1028 (상위 10%) 점수: 0.66688
 
@@ -13,8 +13,8 @@
 - efficientnet_v2_l 모델 사용, Optimizer 변경, Scheduler 추가
 ```
 self.model = models.efficientnet_v2_l(pretrained=True)
-torch.optim.AdamW(model.parameters(), lr=CFG["LEARNING_RATE"])
-lr_scheduler.CosineAnnealingLR(optimizer, T_max=10)
+optimizer = torch.optim.AdamW(model.parameters(), lr=CFG["LEARNING_RATE"])
+scheduler = lr_scheduler.CosineAnnealingLR(optimizer, T_max=10)
 ```
 
 <br>
