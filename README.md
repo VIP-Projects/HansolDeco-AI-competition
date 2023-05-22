@@ -8,16 +8,20 @@
 
 ### K-Fold, Ensemble, CutMix 사용
 - DACON 다른 대회에서 좋은 성적을 냈던 Image Classfication 코드를 주어진 Dataset에 맞도록 수정하여 훈련. <br>
-  - [DACON 작물 병해 분류 AI 경진대회](https://dacon.io/competitions/official/235842/codeshare/3657): 수달이팀, Private 4위(점수:0.99769)
-  
-- Optimizer: torch.optim.AdamW(model.parameters(), lr=2e-4)
-- Scheduler 추가: lr_scheduler.CosineAnnealingLR(optimizer, T_max=10)
+  - DACON 작물 병해 분류 AI 경진대회: [수달이팀, Private 4위(점수:0.99769)](https://dacon.io/competitions/official/235842/codeshare/3657)
+
+- efficientnet_v2_l 모델 사용, Optimizer 변경, Scheduler 추가
+```
+self.model = models.efficientnet_v2_l(pretrained=True)
+torch.optim.AdamW(model.parameters(), lr=CFG["LEARNING_RATE"])
+lr_scheduler.CosineAnnealingLR(optimizer, T_max=10)
+```
 
 <br>
 
 ### 불균형 class 해소 위해 Data Augmentation 진행
 - DACON 다른 대회에서 좋은 성적을 냈던 코드를 주어진 Dataset에 맞도록 수정하여 데이터 불균형 해소함. <br>
-  - [월간 데이콘 Computer Vision 이상치 탐지 알고리즘 경진대회](https://dacon.io/en/competitions/official/235894/codeshare/4946?page=1&dtype=recent): [Private 5위, 0.89376] 데이터 증강
+  - 월간 데이콘 Computer Vision 이상치 탐지 알고리즘 경진대회: [[Private 5위, 0.89376] 데이터 증강](https://dacon.io/en/competitions/official/235894/codeshare/4946?page=1&dtype=recent)
 
 - image개수가 90개 이하인 class들만 적용해서 data augmentation 진행함.
 
@@ -25,10 +29,26 @@
 <br>
 
 ### Hyperparameters
+```
+CFG = {
+    'IMG_SIZE':224,
+    'EPOCHS':100,
+    'LEARNING_RATE':2e-4,
+    'BATCH_SIZE':32,
+    'SEED':100,
+    'FOLD' : 5,
+}
+```
+<br>
 
-'IMG_SIZE'|'EPOCHS'|'LEARNING_RATE'|'BATCH_SIZE'|'SEED'|'FOLD'
---|--|--|--|--|--
-224|100|2e-4|32|100|5
+### transform
+- train dataset에만 RandomCrop(), RandomHorizontalFlip(), RandomPerspective() 적용
 
+<br>
+
+### 아쉬운 점
+- 시간이 부족해 Data augmentataion된 데이터셋으로 image classification을 돌리지 못함.
+
+- Data augmentataio 데이터셋 이용해 epoch 300으로 모델 훈련 시, 더 좋은 성능 보일 거라 예상. 
 
 
