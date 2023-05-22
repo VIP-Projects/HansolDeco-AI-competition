@@ -49,6 +49,6 @@ CFG = {
 ### 아쉬운 점
 - 시간이 부족해 Data Aaugmentataion된 데이터셋으로 Image Classification을 돌리지 못함.
 
-- Data Augmentataio 데이터셋 이용해 epoch 300으로 모델 훈련 시, 더 좋은 성능 보일 거라 예상. 
+- Data Augmentation 데이터셋 이용해 epoch 300으로 모델 훈련 시, 더 좋은 성능 보일 거라 예상. 
 
 
