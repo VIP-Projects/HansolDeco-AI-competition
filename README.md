@@ -1,4 +1,6 @@
-# DACON: [도배 하자 유형 분류 AI 경진대회](https://dacon.io/competitions/official/236082/overview/description)
+# DACON: 도배 하자 유형 분류 AI 경진대회
+<b>출처 |</b> [DACON: 월간 데이콘 Computer Vision 이상치 탐지 알고리즘 경진대회](https://dacon.io/competitions/official/236082/overview/description) <br>
+
 <img alt="Html" src ="https://img.shields.io/badge/dacon Final rank-Top 6%25-lightblue?style=for-the-badge"/>
 
 #### 총 19가지의 도배 하자 유형을 분류하는 AI 모델을 개발 (23.04.10 - 23.06.05) - 길다영, 김준용
