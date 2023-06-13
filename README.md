@@ -1,5 +1,5 @@
 # DACON: 도배 하자 유형 분류 AI 경진대회
-<b>출처 |</b> [DACON - 도배 하자 유형 분류 AI 경진대회](https://dacon.io/competitions/official/236082/overview/description) <br>
+
 
 <img alt="Html" src ="https://img.shields.io/badge/dacon Final rank-Top 6%25-lightblue?style=for-the-badge"/>
 
@@ -55,4 +55,7 @@ CFG = {
 
 - Data Augmentation 데이터셋 이용해 epoch 300으로 모델 훈련 시, 더 좋은 성능 보일 거라 예상. 
 
+<br><br>
 
+
+<b>출처 |</b> [DACON - 도배 하자 유형 분류 AI 경진대회](https://dacon.io/competitions/official/236082/overview/description) <br>
