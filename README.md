@@ -1,5 +1,5 @@
 # DACON: 도배 하자 유형 분류 AI 경진대회
-<b>출처 |</b> [DACON: 월간 데이콘 Computer Vision 이상치 탐지 알고리즘 경진대회](https://dacon.io/competitions/official/236082/overview/description) <br>
+<b>출처 |</b> [DACON - 도배 하자 유형 분류 AI 경진대회](https://dacon.io/competitions/official/236082/overview/description) <br>
 
 <img alt="Html" src ="https://img.shields.io/badge/dacon Final rank-Top 6%25-lightblue?style=for-the-badge"/>
 
